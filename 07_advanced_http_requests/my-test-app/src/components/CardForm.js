@@ -36,7 +36,8 @@ function CardForm({ handleAddCard, cards }){
         const newCard = {
             id: newId,
             title: formData.title,
-            content: formData.content
+            content: formData.content,
+            liked: false
             // ...formData
         }
 
