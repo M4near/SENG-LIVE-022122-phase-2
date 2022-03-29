@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { Switch, Route } from 'react-router-dom';
 import './App.css';
 import Header from './components/Header';
 import Home from './components/Home';
@@ -81,28 +80,16 @@ function App() {
         isDarkMode={isDarkMode}
         onToggleDarkMode={onToggleDarkMode}
       />
-      <Switch>
-        <Route exact path="/">
-          <Home />
-        </Route>
-          <Route path="/projects/new">
-            <ProjectForm onCreateProject={onCreateProject} />
-            </Route>
-          <Route path="/projects/:id/edit">
-            <ProjectEditForm onUpdateProject={onUpdateProject} />
-            </Route>
-        {/* <button onClick={() => fetchProjects()}><BiRefresh /></button> */}
-          <Route path="/projects/id">
-            <ProjectDetail />
-          </Route>
-          <Route path="/projects/">
-            <ProjectList 
-              projects={projects} 
-              onDeleteProject={onDeleteProject}
-              onUpdateProject={onUpdateProject}
-            />
-          </Route>
-      </Switch>
+      <Home />
+      <ProjectForm onCreateProject={onCreateProject} />
+      <ProjectEditForm onUpdateProject={onUpdateProject} />
+      <button onClick={() => fetchProjects()}><BiRefresh /></button>
+      <ProjectList 
+        projects={projects} 
+        onDeleteProject={onDeleteProject}
+        onUpdateProject={onUpdateProject}
+      />
+      <ProjectDetail />
     </div>
   );
 }

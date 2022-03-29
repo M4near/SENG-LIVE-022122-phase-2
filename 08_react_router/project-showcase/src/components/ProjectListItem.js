@@ -1,6 +1,5 @@
 import React from "react";
 import { FaPencilAlt, FaTrash } from 'react-icons/fa';
-import { Link } from "react-router-dom";
 
 
 function ProjectListItem({
@@ -37,7 +36,7 @@ function ProjectListItem({
       </figure>
 
       <section className="details">
-        <h4><Link to={`/projects/${id}`}>{name}</Link></h4>
+        <h4>{name}</h4>
         <p>{about}</p>
         {link ? (
           <p>
@@ -49,12 +48,11 @@ function ProjectListItem({
       <footer className="extra">
         <span className="badge blue">Phase {phase}</span>
         <div className="manage">
-          <Link
-          className="button"
-            to={`/projects/${id}/edit`}
+          <button
+            onClick={handleEditClick}
           >
             <FaPencilAlt />
-          </Link>
+          </button>
           <button
             onClick={handleDeleteClick}
           >

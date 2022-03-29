@@ -16,12 +16,6 @@
       "id": 3,
       "title": "Third Card",
       "liked": false
-    },
-    {
-      "id": 4,
-      "title": "test",
-      "content": "Test123",
-      "liked": true
     }
   ]
 }

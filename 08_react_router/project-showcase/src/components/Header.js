@@ -1,5 +1,4 @@
 import React from 'react';
-import {NavLink, Link} from 'react-router-dom';
 
 function Header({
   isDarkMode,
@@ -17,12 +16,12 @@ function Header({
         Project Showcase
       </h1>
       <div className="navigation">
-        <Link className="button" to="/projects">
+        <a className="button" href="/projects">
           All Projects
-        </Link>
-        <Link className="button" to="/projects/new">
+        </a>
+        <a className="button" href="/projects/new">
           Add Project
-        </Link>
+        </a>
         <button onClick={handleClick}>{isDarkMode ? 'Dark' : 'Light'} Mode</button>
       </div>
     </nav>

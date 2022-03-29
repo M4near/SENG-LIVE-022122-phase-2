@@ -17,8 +17,7 @@ function CardList({ cards, handleRemoveCard, handleEditCard }) {
                         card={card}
                         title={card.title} 
                         content={card.content} 
-                        handleRemoveCard={handleRemoveCard}
-                        handleEditCard={handleEditCard}
+
                         // 🚧 Pass handleRemoveCard() and handleEditCard as props
                     />
                 );
